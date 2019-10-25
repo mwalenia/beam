@@ -8,5 +8,12 @@ pipeline {
                 }
             }
         }
+        stage('second stage lol') {
+                    steps {
+                        script {
+                            echo "next stage lol"
+                        }
+                    }
+                }
     }
 }
