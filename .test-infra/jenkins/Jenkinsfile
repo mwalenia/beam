@@ -12,7 +12,7 @@ pipeline {
         stage('stage 2') {
             steps {
                 script{
-                echo "stage 2"
+                sh "./gradlew spotlessCheck"
                     //do your things of first pipeline stage
                 }
             }
