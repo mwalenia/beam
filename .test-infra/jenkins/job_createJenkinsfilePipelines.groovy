@@ -36,8 +36,9 @@ pipelineConfigs.forEach { config ->
             definition {
                 cps {
                     script(readFileFromWorkspace(".test-infra/jenkins/${config.file}"))
+                    sandbox()
                 }
             }
         }
-    
+
 }
