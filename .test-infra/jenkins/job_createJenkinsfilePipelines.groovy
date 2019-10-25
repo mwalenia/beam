@@ -36,10 +36,17 @@ pipelineConfigs.forEach { config ->
             definition {
                 cpsScm {
                     scm {
-                        git ('file:///var/jenkins_home/beam')
+                        git {
+                            remote {
+                                url ('file:///var/jenkins_home/beam')
+                            }
+                            branch('jenkinsfile-test1')
+                            extensions {
+                                cleanAfterCheckout()
+                            }
+                        }
                     }
                     scriptPath(".test-infra/jenkins/${config.file}")
-                    sandbox()
                 }
             }
         }
