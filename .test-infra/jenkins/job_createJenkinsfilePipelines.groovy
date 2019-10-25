@@ -34,8 +34,11 @@ pipelineConfigs.forEach { config ->
 
         pipelineJob(config.name) {
             definition {
-                cps {
-                    script(readFileFromWorkspace(".test-infra/jenkins/${config.file}"))
+                cpsScm {
+                    scm {
+                        git ('file:///var/jenkins_home/beam')
+                    }
+                    scriptPath(".test-infra/jenkins/${config.file}")
                     sandbox()
                 }
             }
