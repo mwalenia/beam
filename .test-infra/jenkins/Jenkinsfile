@@ -1,0 +1,20 @@
+pipeline {
+    stages {
+        stage('stage 1') {
+            steps {
+                script{
+                echo "stage 1"
+                    //do your things of first pipeline stage
+                }
+            }
+        }
+        stage('stage 2') {
+            steps {
+                script{
+                echo "stage 2"
+                    //do your things of first pipeline stage
+                }
+            }
+        }
+    }
+}
