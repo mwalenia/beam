@@ -27,6 +27,10 @@ def pipelineConfigs = [
         [
                 name: 'anotherTestPipelineJob',
                 file: 'next.jenkinsfile'
+        ],
+        [
+                name: 'noJenkinsfile',
+                file: 'random.jenkinsfile'
         ]
 ]
 
