@@ -403,7 +403,7 @@ class BeamModulePlugin implements Plugin<Project> {
     def google_oauth_clients_version = "1.30.6"
     def grpc_version = "1.27.2"
     def guava_version = "25.1-jre"
-    def hadoop_version = "2.8.5"
+    def hadoop_version = "3.3.0"
     def hamcrest_version = "2.1"
     def jackson_version = "2.10.2"
     def jaxb_api_version = "2.3.3"
